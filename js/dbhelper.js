@@ -9,8 +9,9 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-   // return `http://localhost:${port}/data/restaurants.json`;   
-    return 'http://jdinu.github.io/RestaurantReviewsApp/data/restaurants.json';
+   //return `http://localhost:${port}/data/restaurants.json`;   
+   // return 'http://jdinu.github.io/RestaurantReviewsApp/data/restaurants.json';
+  return 'https://jdinu.github.io/RestaurantReviewsApp/data/restaurants.json';
    }
 
   /**
@@ -42,7 +43,7 @@ class DBHelper {
         callback(error, null);
       } else {
         const restaurant = restaurants.find(r => r.id == id);
-        if (restaurant) { // Got the restaurant
+        if (restaurant) { // Got the restaurantgi
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
           callback('Restaurant does not exist', null);
