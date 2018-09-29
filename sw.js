@@ -1,35 +1,34 @@
-// This file is not currently used
-const statCacheName = 'v1';
+
+ console.log('Service Worker : Registered');
+//const statCacheName = 'v1';
 
 //list of urls we want to cache
-const allCacheURLs = [
+const cacheFiles = [
 '/',
-'/restaurant.html',
 '/index.html',
+'/restaurant.html',
 '/css/styles.css',
 '/js/dbhelper.js',
 '/js/main.js',
 '/js/restaurant_info.js',
 '/data/restaurants.json',
-'/img/1.jpeg',
-'/img/2.jpeg',
-'/img/3.jpeg',
-'/img/4.jpeg',
-'/img/5.jpeg',
-'/img/6.jpeg',
-'/img/7.jpeg',
-'/img/8.jpeg',
-'/img/9.jpeg',
-'/img/10.jpeg'
+'/img/1.jpg',
+'/img/2.jpg',
+'/img/3.jpg',
+'/img/4.jpg',
+'/img/5.jpg',
+'/img/6.jpg',
+'/img/7.jpg',
+'/img/8.jpg',
+'/img/9.jpg',
+'/img/10.jpg'
 ];
 //installing the service worker by using the event listener
 // to cache an array of file names
 self.addEventListener('install', function(e){
-    // wait until the installation event is complete
     e.waitUntil(
-        //using arrow function
-        caches.open(statCacheName).then((cache)=>{
-            return cache.addAll(allCacheURLs);
+        caches.open('v1').then(function(cache){
+            return cache.addAll(cacheFiles);
         })
     );
 });

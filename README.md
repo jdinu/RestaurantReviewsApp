@@ -1,4 +1,4 @@
-# Mobile Web Specialist Certification Course
+# Mobile Web Specialist Certification Course and Front End Web Developer Nano degree 
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
